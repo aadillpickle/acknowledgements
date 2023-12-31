@@ -47,6 +47,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center gap-28 m-24">
+      <div className="flex flex-row justify-center text-5xl">To the people who've helped me become the way that I am</div>
         <div className='flex flex-row justify-center gap-28 flex-wrap'>
         {shuffledLetters.map((letter, index) => (
             <VirtualEnvelope 
@@ -75,6 +76,10 @@ export default function Home() {
             </div>
           ) : null}
         </div>
+            
+          <div className="text-2xl flex flex-col items-center "><div>Made with ❤️&nbsp;by&nbsp;<a className="underline" href="https://twitter.com/aadillpickle">@aadillpickle</a></div><br/><a className="underline text-center" href="https://github.com/aadillpickle/acknowledgements/tree/main">Source code</a></div>
+          
+        
     </div>
   )
 }
