@@ -46,7 +46,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center gap-28 m-28">
+    <div className="flex flex-col items-center gap-28 m-24">
         <div className='flex flex-row justify-center gap-28 flex-wrap'>
         {shuffledLetters.map((letter, index) => (
             <VirtualEnvelope 

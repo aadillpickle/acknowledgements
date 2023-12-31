@@ -36,7 +36,7 @@ body {
 }
 
 .fade-in {
-  animation: fadeIn 3.5s ease-in;
+  animation: fadeIn 2.5s ease-in;
 }
 
 .delayed-fade-in {
