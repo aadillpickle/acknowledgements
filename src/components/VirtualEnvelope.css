@@ -1,0 +1,141 @@
+/* Reset margin, padding, and box-sizing for the component */
+.virtual-envelope * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.virtual-envelope {
+  height: 200px;
+  width: 300px;
+  background-color: #3760C9;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.virtual-envelope .lid {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: transform 0.25s linear;
+}
+
+/* Lid when closed */
+.virtual-envelope .lid.one {
+  border-top: 100px solid #658ced;
+  transform: rotateX(0deg);
+  z-index: 3;
+  transition-delay: 0.75s;
+}
+
+/* Lid when opened */
+.virtual-envelope .lid.two {
+  border-top: 100px solid #3760C9;
+  transform: rotateX(90deg);
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+
+.virtual-envelope .envelope {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-top: 100px solid transparent;
+  border-right: 150px solid #C4DFF0;
+  border-bottom: 100px solid #C4DFF0;
+  border-left: 150px solid #a4d4f2;
+  z-index: 3;
+}
+
+.virtual-envelope .letter {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 2;
+  transition: transform 0.5s;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.virtual-envelope .letter p {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 30px;
+  color: #3B4049;
+  pointer-events: auto;
+}
+
+.virtual-envelope:hover .lid.one {
+  transform: rotateX(90deg);
+  transition-delay: 0s;
+}
+
+.virtual-envelope:hover .lid.two {
+  transform: rotateX(180deg);
+  transition-delay: 0.25s;
+}
+
+.virtual-envelope:hover .letter {
+  transform: translateY(-50px);
+  transition-delay: 0.5s;
+}
+
+.letter.clicked {
+  animation: bounceAndExpand 0.5s forwards;
+}
+
+@keyframes bounceAndExpand {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(20);
+    opacity: 0;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  transition: visibility 0s, opacity 0.5s linear, transform 0.5s ease;
+  animation: modalFadeIn 0.5s forwards;
+  animation-delay: 0.5s; /* Delay to start after letter animation */
+}
+
+@keyframes modalFadeIn {
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+@keyframes modalFadeIn {
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
