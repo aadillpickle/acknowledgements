@@ -65,7 +65,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center gap-16 m-16">
-      <div className="flex flex-row justify-center text-5xl text-center leading-tight tracking-[-.0125em]	">
+      <div className="flex flex-row justify-center text-5xl text-center text-[#F8FCFF] leading-tight tracking-[-.0125em]	">
         To the people who&apos;ve helped me <br /> become the way that I am
       </div>
       <div className="flex flex-row justify-center gap-16 flex-wrap">
@@ -117,7 +117,7 @@ export default function Home() {
         ) : null}
       </div>
 
-      <div className="text-2xl flex flex-col items-center leading-tight">
+      <div className="text-2xl text-[#F8FCFF] flex flex-col items-center leading-tight">
         <div>
           Made with ❤️&nbsp;by&nbsp;
           <a className="underline" href="https://twitter.com/aadillpickle">
@@ -125,7 +125,7 @@ export default function Home() {
           </a>
         </div>
         <a
-          className="underline text-center leading-tight"
+          className="underline text-center text-[#F8FCFF]  leading-tight"
           href="https://github.com/aadillpickle/acknowledgements/tree/main"
         >
           Source code

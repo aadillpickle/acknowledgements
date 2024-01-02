@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .virtual-envelope {
@@ -16,6 +17,7 @@
   justify-content: center;
   z-index: 0;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .virtual-envelope .lid {
@@ -142,4 +144,9 @@
     opacity: 1;
     visibility: visible;
   }
+}
+
+.virtual-envelope:hover {
+  transform: translateY(-5px); /* Adjust the value to control how much it lifts */
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);; /* Adjust to get the desired shadow */
 }
