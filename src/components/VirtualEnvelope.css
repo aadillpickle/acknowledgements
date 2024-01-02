@@ -3,12 +3,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border-radius: 0.5rem;
 }
 
 .virtual-envelope {
   height: 200px;
   width: 300px;
-  background-color: #3760C9;
+  background-color: #F8FCFF;
+  border-radius: 0.5rem;
   position: relative;
   display: flex;
   justify-content: center;
@@ -29,7 +31,7 @@
 
 /* Lid when closed */
 .virtual-envelope .lid.one {
-  border-top: 100px solid #658ced;
+  border-top: 100px solid #6D8BE6;
   transform: rotateX(0deg);
   z-index: 3;
   transition-delay: 0.75s;
@@ -37,7 +39,7 @@
 
 /* Lid when opened */
 .virtual-envelope .lid.two {
-  border-top: 100px solid #3760C9;
+  border-top: 100px solid #6D8BE6;
   transform: rotateX(90deg);
   z-index: 1;
   transition-delay: 0.5s;
@@ -48,9 +50,9 @@
   height: 100%;
   width: 100%;
   border-top: 100px solid transparent;
-  border-right: 150px solid #C4DFF0;
-  border-bottom: 100px solid #C4DFF0;
-  border-left: 150px solid #a4d4f2;
+  border-right: 150px solid #F8FCFF;
+  border-bottom: 100px solid #F8FCFF;
+  border-left: 150px solid #E0F2FF;
   z-index: 3;
 }
 
@@ -59,7 +61,7 @@
   top: 0;
   width: 80%;
   height: 80%;
-  background-color: white;
+  background-color: #FFFCE9;
   border-radius: 15px;
   z-index: 2;
   transition: transform 0.5s;
@@ -70,6 +72,7 @@
 .virtual-envelope .letter p {
   text-align: center;
   font-size: 20px;
+  letter-spacing: -0.0125em;
   margin-top: 30px;
   color: #3B4049;
   pointer-events: auto;
@@ -112,7 +115,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.5);
-  background-color: white;
+  background-color: #FFFCE9;
+  border-radius: 0.5rem;
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   opacity: 0;
