@@ -64,7 +64,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center gap-16 m-16">
+    <div className="flex flex-col items-center gap-16 m-12">
       <div className="flex flex-row justify-center text-5xl text-center text-[#F8FCFF] leading-tight tracking-[-.0125em]	">
         To the people who&apos;ve helped me <br /> become the way that I am
       </div>
