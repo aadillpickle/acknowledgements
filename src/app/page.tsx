@@ -117,15 +117,15 @@ export default function Home() {
         ) : null}
       </div>
 
-      <div className="text-2xl text-[#F8FCFF] flex flex-col items-center leading-tight mb-4">
-        <div>
+      <div className="text-2xl text-[#F8FCFF] flex flex-col items-center justify-center leading-tight mb-4">
+        <div className="text-center text-[#F8FCFF] leading-tight">
           Made with ❤️&nbsp;by&nbsp;
           <a className="underline" href="https://twitter.com/aadillpickle">
             @aadillpickle
           </a>
         </div>
         <a
-          className="underline text-center text-[#F8FCFF]  leading-tight"
+          className="underline text-center text-[#F8FCFF] leading-tight"
           href="https://github.com/aadillpickle/acknowledgements/tree/main"
         >
           Source code
