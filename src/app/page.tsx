@@ -117,7 +117,7 @@ export default function Home() {
         ) : null}
       </div>
 
-      <div className="text-2xl text-[#F8FCFF] flex flex-col items-center leading-tight">
+      <div className="text-2xl text-[#F8FCFF] flex flex-col items-center leading-tight mb-4">
         <div>
           Made with ❤️&nbsp;by&nbsp;
           <a className="underline" href="https://twitter.com/aadillpickle">
