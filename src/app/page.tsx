@@ -130,6 +130,12 @@ export default function Home() {
         >
           Source code
         </a>
+        <a
+          className="underline text-center text-[#F8FCFF] leading-tight"
+          href="https://aadillpickle.substack.com/p/an-8-year-old-just-t-posed-on-me"
+        >
+          Why I did this
+        </a>
       </div>
     </div>
   );
