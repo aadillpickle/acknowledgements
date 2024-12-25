@@ -12,7 +12,7 @@ function shuffleArray(array: any) {
   }
   return array;
 }
-const renderTextWithLineBreaks = (text) => {
+const renderTextWithLineBreaks = (text: any) => {
   const textParts = text.split("\n");
   const elements = [];
 
@@ -21,17 +21,15 @@ const renderTextWithLineBreaks = (text) => {
       <span
         key={`span-${i}`}
         className="delayed-fade-in"
-        style={{ animationDelay: `${3 * i}s` }} // Set the delay here
+        style={{ animationDelay: `${2.5 * i}s` }}
       >
         {textParts[i]}
       </span>
     );
     if (i < textParts.length - 1) {
       elements.push(
-        <>
-          <br key={`br-${i}`} />
-          <br />
-        </>
+        <br key={`br1-${i}`} />,
+        <br key={`br2-${i}`} />
       );
     }
   }
@@ -96,7 +94,7 @@ export default function Home() {
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
+                    strokeWidth="0"
                     viewBox="0 0 512 512"
                     height="32px"
                     width="32px"
@@ -108,7 +106,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full flex flex-row justify-center items-center mt-16">
-                <div className="w-3/4 text-black fade-in text-xl">
+                <div className="w-3/4 text-black fade-in text-xl overflow-y-auto max-h-[90vh]">
                   {renderTextWithLineBreaks(content[activeLetter])}
                 </div>
               </div>
